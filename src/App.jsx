@@ -13,6 +13,7 @@ import NotFound from "./components/NotFound";
 import CustomerDetails from "./components/CustomerDetails";
 import { Route, Routes } from "react-router-dom";
 import CustomersAndAccountsMenu from "./components/CustomersAndAccountsMenu";
+import ShoppingCart from "./components/ShoppingCart";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/UpdateProductForm/:id" element={<UpdateProductForm />}/>
         <Route path="/ListAllProducts" element={<ListAllProducts/>}/>
         <Route path="/CustomerDetails/:id" element={<CustomerDetails />}/>
+        <Route path="/cart" element={<ShoppingCart />}/>
         <Route path="*" element={<NotFound />}/>
       </Routes>
     </>
