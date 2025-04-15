@@ -1,19 +1,15 @@
-/* Apply Trebuchet MS font globally */
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* Ensure all text elements inherit the font */
 h1, h2, h3, h4, h5, h6, p, span, a {
   font-family: inherit;
 }
 
-/* Make all headers purple */
 h1, h2, h3, h4, h5, h6 {
   color: purple;
 }
 
-/* Style all buttons */
 button {
   background-color: purple;
   color: white;
@@ -26,8 +22,6 @@ button {
 button:hover {
   background-color: #6a1b9a; /* Darker purple on hover */
 }
-
-
 
 /* Custom navbar styles */
 .navbar-custom {
@@ -44,4 +38,21 @@ button:hover {
 .nav-link-custom:hover {
   color: purple;
   font-weight: bold;
+}
+
+.btn {
+  background-color: purple !important;
+  color: white !important;
+  border: none !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+  background-color: #6a1b9a !important; /* Darker purple on hover/focus/active */
+  color: white !important;
+  box-shadow: none !important;
+  outline: none !important;
 }

@@ -1,8 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  items: [],
+const loadCartFromSessionStorage = () => {
+  try {
+    const serializedCart = sessionStorage.getItem('cart');
+    if (serializedCart === null) {
+      return { items: [] };
+    }
+    return JSON.parse(serializedCart);
+  } catch (e) {
+    console.warn('Failed to load cart from sessionStorage:', e);
+    return { items: [] };
+  }
 };
+
+const initialState = loadCartFromSessionStorage();
 
 export const cartSlice = createSlice({
   name: 'cart',
